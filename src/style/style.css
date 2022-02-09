@@ -1,0 +1,206 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.App {
+  width: 100%;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background: #ececec;
+  background-image: url(../svg/github.svg);
+}
+
+@media (max-width: 400px) {
+  .App {
+    min-height: 100vh;
+  }
+}
+
+.App footer {
+  background: #3a3a3a;
+  color: #f1f1f1;
+  font-weight: 100;
+  font-size: .8em;
+  width: 100%;
+  height: 35px;
+  bottom: 0;
+  left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media (max-width: 400px) {
+  .App footer {
+    margin-top: 2em;
+  }
+}
+
+.header {
+  font-weight: 800;
+  font-size: 3.2em;
+  text-align: center;
+  margin: 1em 0 1em 0;
+  color: #3a3a3a;
+}
+
+@media (max-width: 800px) {
+  .header {
+    margin: 10px 0 15px 0;
+    font-size: 2.8em;
+  }
+}
+
+.ujra {
+  padding: 6px 15px;
+  border-radius: 21px;
+  caret-color: #616161;
+  background: #fff;
+  -webkit-box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+          box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+}
+
+@media (max-width: 800px) {
+  .ujra {
+    padding: 4px 15px;
+  }
+}
+
+.ujra .inputBox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: auto;
+}
+
+.ujra .inputBox .searchIc {
+  width: 27px;
+  height: 27px;
+}
+
+.ujra .inputBox .input {
+  border: none;
+  padding: 8px;
+  width: 100%;
+  outline: none;
+  margin: 0 10px;
+  font-size: 1.3em;
+  font-weight: 100;
+}
+
+.ujra .inputBox ::-webkit-input-placeholder {
+  color: #c2c2c2;
+  opacity: 1;
+}
+
+.ujra .inputBox :-ms-input-placeholder {
+  color: #c2c2c2;
+  opacity: 1;
+}
+
+.ujra .inputBox ::-ms-input-placeholder {
+  color: #c2c2c2;
+  opacity: 1;
+}
+
+.ujra .inputBox ::placeholder {
+  color: #c2c2c2;
+  opacity: 1;
+}
+
+.ujra .inputBox .closeIcClosed {
+  display: none;
+}
+
+.ujra .inputBox .closeIcOpen {
+  display: block;
+  cursor: pointer;
+  width: 28px;
+  height: 28px;
+}
+
+.ujra .userOutput {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-height: 7em;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 10px 25px;
+  border-top: 1px solid #a8a8a8;
+  margin-top: 1em;
+}
+
+.ujra .userOutput .avatar {
+  width: 200px;
+  height: 200px;
+  position: relative;
+}
+
+.ujra .userOutput .avatar::before {
+  content: "user not found";
+  position: absolute;
+  background: #cfcfcf;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.ujra .userOutput .username {
+  font-size: 1.6em;
+  margin: 10px 0;
+}
+
+.ujra .userOutput .url {
+  background: #3a3a3a;
+  border-radius: 15px;
+  padding: 2px 25px;
+  font-size: 1.3em;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 100;
+  line-height: 1.2;
+}
+/*# sourceMappingURL=style.css.map */

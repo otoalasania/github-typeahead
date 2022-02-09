@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap');
+
+$darkColor: #3a3a3a;
+@mixin flexCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} 
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.App{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    background: rgb(236, 236, 236);
+    background-image: url(../svg/github.svg);
+    @media (max-width:400px) {
+        min-height: 100vh;
+    }
+    footer{
+        background: $darkColor;
+        color: #f1f1f1;
+        font-weight: 100;
+        font-size: .8em;
+        width: 100%;
+        height: 35px;
+        bottom: 0;
+        left: 0;
+        @include flexCenter();
+        @media (max-width:400px) {
+            margin-top: 2em;
+        }
+    }
+}
+
+.header{
+    font-weight: 800;
+    font-size: 3.2em;
+    text-align: center;
+    margin: 1em 0 1em 0;
+    color: $darkColor;
+    @media (max-width:800px) {
+        margin: 10px 0 15px 0;
+        font-size: 2.8em;
+    }
+}
+
+.ujra{
+    padding: 6px 15px;
+    border-radius: 21px;
+    caret-color: #616161;
+    background: #fff;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    @media (max-width:800px) {
+        padding: 4px 15px;
+    }
+    .inputBox{
+        display: flex;
+        align-items: center;
+        width: auto;
+        .searchIc{
+            width: 27px;
+            height: 27px;
+        }
+        .input{
+            border: none;
+            padding: 8px;
+            width: 100%;
+            outline: none;
+            margin: 0 10px;
+            font-size: 1.3em;
+            font-weight: 100;
+        }
+        ::placeholder {
+            color: rgb(194, 194, 194);
+            opacity: 1;
+        }
+        .closeIcClosed{
+            display: none;
+        }
+        .closeIcOpen{
+            display: block;
+            cursor: pointer;
+            width: 28px;
+            height: 28px;
+        }        
+    }
+    .userOutput{
+        display: flex;
+        flex-direction: column;
+        min-height: 7em;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px 25px;
+        border-top: 1px solid rgb(168, 168, 168);
+        margin-top: 1em;
+        .avatar{
+            width: 200px;
+            height: 200px;
+            position: relative;
+            &::before{
+                content: "user not found";
+                position: absolute;
+                background: rgb(207, 207, 207);
+                width: 100%;
+                height: 100%;
+                @include flexCenter();
+            }
+        }
+        .username{
+            font-size: 1.6em;
+            margin: 10px 0;
+        }
+        .url{
+            background: $darkColor;
+            border-radius: 15px;
+            padding: 2px 25px;
+            font-size: 1.3em;
+            color: #fff;
+            text-decoration: none;
+            font-weight: 100;
+            line-height: 1.2;
+        }
+        
+    }
+}
